@@ -23,8 +23,8 @@ const PlatformerGame = props =>{
     let goal = new Goal(goalData.x, goalData.y, goalData.w, goalData.h)
     let collision = new Collision()
     let GA = null;
-    let fps = 60
-    let fpsInterval = 1000/fps
+    //let fps = 60
+    //let fpsInterval = 1000/fps
     //let startTime = Date.now()
 
     let iteration = useRef(0)
@@ -90,7 +90,7 @@ const PlatformerGame = props =>{
                                 // }
                             }
                             iteration.current++;
-                            
+                            console.log(iteration.current)
                            // console.log("iteration: " + population[0].iteration)
                             if(iteration.current === population.current[0].moves.length){
                                 for(let i=0; i<props.popSizeRef.current; i++){
